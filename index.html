@@ -26,6 +26,215 @@
     <link rel="stylesheet" href="assets/css/app.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Scoped Header & Navigation Styles */
+        .header-layout1 .menu-area {
+            position: relative;
+            background-color: var(--white-color, #ffffff);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 0;
+        }
+        .header-layout1 .container.th-container {
+            position: relative;
+            z-index: 2;
+        }
+        .header-layout1 .logo-bg {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            height: 100% !important;
+            min-width: 240px !important;
+            width: 20% !important;
+            max-width: 320px !important;
+            z-index: 1 !important;
+            background-color: var(--theme-color, #0B59DB) !important;
+        }
+        .header-layout1 .header-logo {
+            padding-top: 16px !important;
+            padding-bottom: 16px !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        .header-layout1 .header-logo a {
+            display: inline-flex !important;
+            align-items: center !important;
+        }
+        .header-layout1 .header-logo img {
+            max-height: 48px !important;
+            width: auto !important;
+            display: block !important;
+        }
+        @media (min-width: 1200px) {
+            .header-layout1 .header-row {
+                display: grid !important;
+                grid-template-columns: 1fr auto 1fr !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+            .header-layout1 .header-col-left {
+                justify-self: start !important;
+                display: flex !important;
+                align-items: center !important;
+            }
+            .header-layout1 .header-col-center {
+                justify-self: center !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .header-layout1 .header-col-right {
+                justify-self: end !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: flex-end !important;
+            }
+            .header-layout1 .main-menu {
+                padding-left: 0 !important;
+            }
+            .header-layout1 .main-menu > ul {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                gap: 38px !important;
+                list-style: none !important;
+            }
+            .header-layout1 .main-menu > ul > li {
+                margin: 0 !important;
+                padding: 0 !important;
+                list-style: none !important;
+                display: inline-block !important;
+            }
+            .header-layout1 .main-menu > ul > li > a {
+                padding: 30px 0 !important;
+                font-family: var(--title-font, "Plus Jakarta Sans", sans-serif) !important;
+                font-size: 16px !important;
+                font-weight: 600 !important;
+                color: var(--title-color, #0B1422) !important;
+                text-decoration: none !important;
+                position: relative !important;
+                transition: color 0.3s ease !important;
+                display: inline-block !important;
+                line-height: 1 !important;
+            }
+            .header-layout1 .main-menu > ul > li > a:hover,
+            .header-layout1 .main-menu > ul > li > a.active {
+                color: var(--theme-color, #0B59DB) !important;
+            }
+            .header-layout1 .main-menu > ul > li > a::before {
+                content: "" !important;
+                position: absolute !important;
+                bottom: 20px !important;
+                left: 0 !important;
+                width: 0% !important;
+                height: 2px !important;
+                background-color: var(--theme-color, #0B59DB) !important;
+                transition: width 0.3s ease !important;
+            }
+            .header-layout1 .main-menu > ul > li > a:hover::before,
+            .header-layout1 .main-menu > ul > li > a.active::before {
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 1199.98px) {
+            .header-layout1 .header-row {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                width: 100% !important;
+            }
+            .header-layout1 .header-col-center {
+                display: none !important;
+            }
+            .header-layout1 .header-col-left {
+                flex: 0 0 auto !important;
+            }
+            .header-layout1 .header-col-right {
+                flex: 0 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 15px !important;
+            }
+            .header-layout1 .logo-bg {
+                width: 50% !important;
+                max-width: 260px !important;
+            }
+            .header-layout1 .header-logo img {
+                max-height: 42px !important;
+            }
+            .header-layout1 .th-menu-toggle {
+                width: 44px !important;
+                height: 44px !important;
+                line-height: 44px !important;
+                background-color: var(--smoke-color, #F2F5FA) !important;
+                color: var(--title-color, #0B1422) !important;
+                border: 1px solid var(--th-border-color, #D5D7DA) !important;
+                border-radius: 8px !important;
+                font-size: 20px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                cursor: pointer !important;
+                transition: all 0.3s ease !important;
+            }
+            .header-layout1 .th-menu-toggle:hover {
+                background-color: var(--theme-color, #0B59DB) !important;
+                color: #ffffff !important;
+                border-color: var(--theme-color, #0B59DB) !important;
+            }
+        }
+        .header-layout1 .header-button {
+            display: flex !important;
+            align-items: center !important;
+            gap: 15px !important;
+            margin-left: auto !important;
+        }
+        .header-layout1 .header-button .th-btn {
+            padding: 16px 32px !important;
+            font-size: 15px !important;
+            font-weight: 600 !important;
+            border-radius: 100px !important;
+            background-color: var(--theme-color, #0B59DB) !important;
+            color: #ffffff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            white-space: nowrap !important;
+            text-transform: capitalize !important;
+            box-shadow: 0 4px 14px rgba(11, 89, 219, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+        .header-layout1 .header-button .th-btn:hover {
+            background-color: var(--title-color, #0B1422) !important;
+            color: #ffffff !important;
+            box-shadow: 0 8px 22px rgba(11, 20, 34, 0.25) !important;
+            transform: translateY(-1px) !important;
+        }
+        /* Scoped Mobile Menu Drawer Styles */
+        .th-menu-wrapper .mobile-logo {
+            background-color: var(--title-color, #0B1422) !important;
+            padding: 28px 20px !important;
+            text-align: center !important;
+        }
+        .th-menu-wrapper .mobile-logo img {
+            max-height: 44px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .th-menu-wrapper .th-mobile-menu ul li a {
+            font-family: var(--title-font, "Plus Jakarta Sans", sans-serif) !important;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+        }
+        .th-menu-wrapper .mobile-btn .th-btn {
+            width: 100% !important;
+            justify-content: center !important;
+            padding: 14px 20px !important;
+            border-radius: 100px !important;
+        }
+    </style>
 </head>
 <body>
     <div class="slider-drag-cursor d-flex align-items-center justify-content-between"><span class="drag-icon-left"><img src="assets/img/icon/drag-arrow-left.svg" alt=""></span>DRAG <span class="drag-icon-right"><img src="assets/img/icon/drag-arrow-right.svg" alt=""></span>
@@ -37,9 +246,87 @@
     <div class="sidemenu-wrapper sidemenu-info"><div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button><div class="widget"><div class="th-widget-about"><div class="about-logo"><a href="index.html"><img src="assets/img/logo2.svg" alt="Atek"></a></div><p class="about-text">Quick access to essential system features, including the dashboard for an overview of operations, network settings for managing connectivity, system logs for tracking activities.</p><div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></div></div></div><div class="widget"><h3 class="widget_title">Recent Posts</h3><div class="recent-post-wrap"><div class="recent-post d-flex align-items-center"><div class="media-img"><a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a></div><div class="media-body"><div class="recent-post-meta"><a href="blog.html"><i class="far fa-calendar"></i>24 Jun , 2025</a></div><h4 class="post-title"><a class="text-inherit" href="blog-details.html">Where Vision Meets Concrete Reality</a></h4></div></div><div class="recent-post d-flex align-items-center"><div class="media-img"><a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a></div><div class="media-body"><div class="recent-post-meta"><a href="blog.html"><i class="far fa-calendar"></i>22 Jun , 2025</a></div><h4 class="post-title"><a class="text-inherit" href="blog-details.html">Raising the Bar in Construction.</a></h4></div></div></div></div><div class="widget"><h3 class="widget_title">Get In Touch</h3><div class="th-widget-contact"><div class="info-box_text"><div class="icon"><img src="assets/img/icon/phone.svg" alt="img"></div><div class="details"><p><a href="tel:+01234567890" class="info-box_link">+01 234 567 890</a></p><p><a href="tel:+09876543210" class="info-box_link">+09 876 543 210</a></p></div></div><div class="info-box_text"><div class="icon"><img src="assets/img/icon/envelope.svg" alt="img"></div><div class="details"><p><a href="mailto:mailinfo00@atek.com" class="info-box_link">mailinfo00@atek.com</a></p><p><a href="mailto:support24@atek.com" class="info-box_link">support24@atek.com</a></p></div></div><div class="info-box_text"><div class="icon"><img src="assets/img/icon/location-dot.svg" alt="img"></div><div class="details"><p>789 Inner Lane, Holy park, California, USA</p></div></div></div></div></div></div>
     <div class="popup-search-box"><button class="searchClose"><i class="fal fa-times"></i></button><form action="#"><input type="text" placeholder="What are you looking for?"> <button type="submit"><i class="fal fa-search"></i></button></form>
     </div>
-    <div class="th-menu-wrapper onepage-nav"><div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button><div class="mobile-logo"><a href="index.html"><img src="assets/img/logo2.svg" alt="Atek"></a></div><div class="th-mobile-menu allow-natural-scroll"><ul><li class="menu-item-has-children mega-menu-wrap"><a class="active" href="index.html">Home</a><ul class="sub-menu"><li><a href="index.html">Home IT Solution</a></li><li><a href="home-startup-tech-agency.html.html">Home Startup Tech Agency</a></li><li><a href="home-ai-machine.html">Home Ai-Machine</a></li><li><a href="home-consulting.html">Home Consulting</a></li><li><a href="home-cloud.html">Home Cloud</a></li><li><a href="home-startup.html">Home Startup</a></li><li><a href="home-cybersecurity.html">Home Cybersecurity</a></li><li><a href="home-sass.html">SaaS Business Product</a></li><li><a href="home-tech-support.html">Tech Support Services</a></li><li><a href="home-software-development.html">Home Software-Development</a></li><li><a href="home-app-development.html">Web & App Development</a></li><li><a href="home-it-solutions.html">Home It Solutions</a></li><li><a href="home-digital-transformation.html">Home Digital Transformation</a></li><li><a href="home-data-analytics.html">Home Data Analytics & Big</a></li><li><a href="home-blockchain-fintech.html">Home Blockchain & Fintech</a></li></ul></li><li><a href="about.html">About Us</a></li><li class="menu-item-has-children"><a href="#">Pages</a><ul class="sub-menu"><li class="menu-item-has-children"><a href="#">Shop</a><ul class="sub-menu"><li><a href="shop.html">Shop</a></li><li><a href="shop-details.html">Shop Details</a></li><li><a href="cart.html">Cart Page</a></li><li><a href="checkout.html">Checkout</a></li><li><a href="wishlist.html">Wishlist</a></li></ul></li><li><a href="gallery.html">Gallery</a></li><li><a href="case-study.html">Case Study</a></li><li><a href="case-study-details.html">Case Study Details</a></li><li><a href="career.html">Career</a></li><li><a href="career-details.html">Career Details</a></li><li><a href="team-guide.html">Team</a></li><li><a href="team-guider-details.html">Team Details</a></li><li><a href="faq.html">Faq Page</a></li><li><a href="price.html">Price Package</a></li><li><a href="error.html">Error Page</a></li></ul></li><li class="menu-item-has-children"><a href="#">Our Services</a><ul class="sub-menu"><li><a href="service.html">Services</a></li><li><a href="service-details.html">Service Details</a></li></ul></li><li class="menu-item-has-children"><a href="#">Projects</a><ul class="sub-menu"><li><a href="project-grid.html">Project Grid</a></li><li><a href="project-details.html">Project Details</a></li></ul></li><li class="menu-item-has-children"><a href="#">Blog</a><ul class="sub-menu"><li><a href="blog.html">Blog</a></li><li><a href="blog-grid.html">Blog Grid</a></li><li><a href="blog-details.html">Blog Details</a></li></ul></li><li class="menu-item-has-children"><a href="contact.html">Contact us</a><ul class="sub-menu"><li><a href="contact.html">Contact Us</a></li><li><a href="contact-2.html">Contact Us Two</a></li></ul></li></ul></div></div>
-</div>
-    <header class="th-header header-layout1"><div class="header-top"><div class="container th-container"><div class="row justify-content-center justify-content-xl-between align-items-center"><div class="col-auto d-none d-md-block"><div class="header-links"><ul><li class="d-none d-xl-inline-block"><i class="fa-sharp fa-regular fa-location-dot"></i> <span>45 New Eskaton Road, Austria</span></li><li class="d-none d-xl-inline-block"><i class="fa-regular fa-clock"></i> <span>Sun to Friday: 8.00 am - 7.00 pm</span></li></ul></div></div><div class="col-auto"><div class="header-right style2"><div class="currency-menu"><i class="fa-light fa-circle-dollar"></i> <select class="form-select nice-select"><option selected="">USD</option><option>CNY</option><option>EUR</option><option>AUD</option></select></div><div class="header-links"><ul><li class="d-none d-md-inline-block"><a href="faq.html">FAQ</a></li><li class="d-none d-md-inline-block"><a href="contact.html">Support</a></li></ul></div></div></div></div></div></div><div class="sticky-wrapper"><div class="menu-area"><div class="container th-container"><div class="row align-items-center justify-content-between"><div class="col-auto"><div class="header-logo"><a href="index.html"><img src="assets/img/logo.svg" alt="Atek"></a></div></div><div class="col-auto me-xxl-auto"><nav class="main-menu d-none d-xl-inline-block"><ul><li class="menu-item-has-children mega-menu-wrap"><a class="active" href="index.html">Home</a><ul class="mega-menu mega-menu-content allow-natural-scroll"><li><div class="container"><div class="row gy-4"><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-it-solution.jpg" alt="Home IT Solution"><div class="btn-wrap"><a href="index.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="index.html"><span>01.</span>Home IT Solution</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-startup-tech-agency.jpg" alt="Home Startup Tech Agency"><div class="btn-wrap"><a href="home-startup-tech-agency.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-startup-tech-agency.html"><span>02.</span>Home Startup Tech Agency</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-ai.jpg" alt="Home Ai-Machine"><div class="btn-wrap"><a href="home-ai-machine.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-ai-machine.html"><span>03.</span>Home Ai-Machine</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-consulting.jpg" alt="Home Consulting"><div class="btn-wrap"><a href="home-consulting.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-consulting.html"><span>04.</span>Home Consulting</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-cloud.jpg" alt="Home Cloud"><div class="btn-wrap"><a href="home-cloud.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-cloud.html"><span>05.</span>Home Cloud</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/startup.jpg" alt="Home Startup"><div class="btn-wrap"><a href="home-startup.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-startup.html"><span>06.</span>Home Startup</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-cybersecurity.jpg" alt="Home Cybersecurity"><div class="btn-wrap"><a href="home-cybersecurity.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-cybersecurity.html"><span>07.</span>Home Cybersecurity</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-sass.jpg" alt="Home SaaS Business Product"><div class="btn-wrap"><a href="home-sass.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-sass.html"><span>08.</span>SaaS Business Product</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/home-tech-support.jpg" alt="Home Tech Support Services"><div class="btn-wrap"><a href="home-tech-support.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-tech-support.html"><span>09.</span>Tech Support Services</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/software-deve.jpg" alt="Home Software-Development"><div class="btn-wrap"><a href="home-software-development.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-software-development.html"><span>10.</span>Home Software-Development</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/app-development.jpg" alt="Home Web & App Development"><div class="btn-wrap"><a href="home-app-development.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-app-development.html"><span>11.</span>Web & App Development</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/it-solutions.jpg" alt="Home It Solutions"><div class="btn-wrap"><a href="home-it-solutions.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-it-solutions.html"><span>12.</span>Home It Solutions</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/digital-transformation.jpg" alt="Home Digital Transformation"><div class="btn-wrap"><a href="home-digital-transformation.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-digital-transformation.html"><span>13.</span>Home Digital Transformation</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/data-analytics.jpg" alt="Home Data Analytics & Big"><div class="btn-wrap"><a href="home-data-analytics.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-data-analytics.html"><span>14.</span>Home Data Analytics & Big</a></h3></div></div><div class="col-lg-3"><div class="mega-menu-box"><div class="mega-menu-img"><img src="assets/img/pages/blockchain-fintech.jpg" alt="Home Blockchain & Fintech"><div class="btn-wrap"><a href="home-blockchain-fintech.html" class="th-btn">View Demo</a></div></div><h3 class="mega-menu-title"><a href="home-blockchain-fintech.html"><span>15.</span>Home Blockchain & Fintech</a></h3></div></div></div></div></li></ul></li><li><a href="about.html">About Us</a></li><li class="menu-item-has-children"><a href="#">Pages</a><ul class="sub-menu"><li class="menu-item-has-children"><a href="#">Shop</a><ul class="sub-menu"><li><a href="shop.html">Shop</a></li><li><a href="shop-details.html">Shop Details</a></li><li><a href="cart.html">Cart Page</a></li><li><a href="checkout.html">Checkout</a></li><li><a href="wishlist.html">Wishlist</a></li></ul></li><li><a href="gallery.html">Gallery</a></li><li><a href="case-study.html">Case Study</a></li><li><a href="case-study-details.html">Case Study Details</a></li><li><a href="career.html">Career</a></li><li><a href="career-details.html">Career Details</a></li><li><a href="team-guide.html">Team</a></li><li><a href="team-guider-details.html">Team Details</a></li><li><a href="faq.html">Faq Page</a></li><li><a href="price.html">Price Package</a></li><li><a href="error.html">Error Page</a></li></ul></li><li class="menu-item-has-children"><a href="#">Our Services</a><ul class="sub-menu"><li><a href="service.html">Services</a></li><li><a href="service-details.html">Service Details</a></li></ul></li><li class="menu-item-has-children"><a href="#">Projects</a><ul class="sub-menu"><li><a href="project-grid.html">Project Grid</a></li><li><a href="project-details.html">Project Details</a></li></ul></li><li class="menu-item-has-children"><a href="#">Blog</a><ul class="sub-menu"><li><a href="blog.html">Blog</a></li><li><a href="blog-grid.html">Blog Grid</a></li><li><a href="blog-details.html">Blog Details</a></li></ul></li><li class="menu-item-has-children"><a href="contact.html">Contact us</a><ul class="sub-menu"><li><a href="contact.html">Contact Us</a></li><li><a href="contact-2.html">Contact Us Two</a></li></ul></li></ul></nav><button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button></div><div class="col-auto d-none d-xl-block"><div class="header-button"><button type="button" class="icon-btn searchBoxToggler"><img src="assets/img/icon/search.svg" alt="icon"></button> <a href="contact.html" class="th-btn th-icon">Get In Touch <i class="fa-light fa-arrow-right-long"></i></a></div></div></div></div><div class="logo-bg" data-mask-src="assets/img/logo_bg_mask.png"></div></div></div></header>
+    <div class="th-menu-wrapper onepage-nav">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Web Global"></a>
+            </div>
+            <div class="th-mobile-menu allow-natural-scroll">
+                <ul>
+                    <li><a href="#homesec">Home</a></li>
+                    <li><a href="#aboutussec">About Us</a></li>
+                    <li><a href="#servicessec">Services</a></li>
+                    <li><a href="#contactussec">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-btn mt-30 px-3">
+                <a href="#contactussec" class="th-btn th-icon">Get In Touch <i class="fa-regular fa-arrow-up-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+    <header class="th-header header-layout1">
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container th-container">
+                    <div class="row align-items-center justify-content-between header-row">
+                        <div class="col-auto header-col-left">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/img/logo.png" alt="Web Global"></a>
+                            </div>
+                        </div>
+                        <div class="col-auto header-col-center">
+                            <nav class="main-menu onepage-nav d-none d-xl-inline-block">
+                                <ul>
+                                    <li><a href="#homesec" class="active">Home</a></li>
+                                    <li><a href="#aboutussec">About Us</a></li>
+                                    <li><a href="#servicessec">Services</a></li>
+                                    <li><a href="#contactussec">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-auto header-col-right">
+                            <div class="header-button">
+                                <a href="#contactussec" class="th-btn th-icon d-none d-xl-inline-flex">Get In Touch <i class="fa-regular fa-arrow-up-right ms-2"></i></a>
+                                <button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo-bg" data-mask-src="assets/img/logo_bg_mask.png"></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navMap = {
+                "#homesec": "#hero",
+                "#aboutussec": "#about-sec",
+                "#servicessec": "#service-sec",
+                "#contactussec": ".footer-wrapper"
+            };
+            document.querySelectorAll('.th-header a[href^="#"], .th-menu-wrapper a[href^="#"]').forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    var href = this.getAttribute("href");
+                    var target = document.querySelector(href);
+                    if (!target && navMap[href]) {
+                        target = document.querySelector(navMap[href]);
+                    }
+                    if (target) {
+                        e.preventDefault();
+                        var headerOffset = 80;
+                        var elementPosition = target.getBoundingClientRect().top;
+                        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                    var menuWrapper = document.querySelector(".th-menu-wrapper");
+                    if (menuWrapper && menuWrapper.classList.contains("th-body-visible")) {
+                        menuWrapper.classList.remove("th-body-visible");
+                    }
+                });
+            });
+        });
+    </script>
     <div class="th-hero-wrapper hero-1" id="hero"><div class="swiper th-slider hero-slider-1" id="heroSlide1" data-slider-options='{"effect":"fade","menu": ["", "", ""],"heroSlide1": {"swiper-container": {"pagination": {"el": ".swiper-pagination", "clickable": true }}}}'><div class="swiper-wrapper"><div class="swiper-slide"><div class="hero-inner"><div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_1.jpg"></div><div class="hero-1-shape d-none d-lg-block" data-ani="slideinleft" data-ani-delay="0.4s"><img src="assets/img/shape/hero-1-shape.png" alt="hero-shape"></div><div class="container"><div class="row"><div class="col-xl-9 col-lg-8"><div class="hero-style1"><span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Dynamic IT, Dynamic Results.</span><h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Precision IT Solutions, Tailored for You</h1><p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Welcome to Atek where we specialize in delivering tailored technology and IT solutions.</p><div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html" class="th-btn style7 th-icon">Discover More <i class="fa-light fa-arrow-right-long"></i> </a><a href="service.html" class="th-btn style2 th-icon">Our Services <i class="fa-light fa-arrow-right-long"></i></a></div></div></div></div></div></div></div><div class="swiper-slide"><div class="hero-inner"><div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_2.jpg"></div><div class="hero-1-shape d-none d-lg-block" data-ani="slideinleft" data-ani-delay="0.4s"><img src="assets/img/shape/hero-1-shape.png" alt="hero-shape"></div><div class="container"><div class="row"><div class="col-xl-9 col-lg-8"><div class="hero-style1"><span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Dynamic IT, Dynamic Results.</span><h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Smart IT Consulting for Modern Businesses</h1><p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Welcome to Atek where we specialize in delivering tailored technology and IT solutions.</p><div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html" class="th-btn style7 th-icon">Discover More <i class="fa-light fa-arrow-right-long"></i> </a><a href="service.html" class="th-btn style2 th-icon">Our Services <i class="fa-light fa-arrow-right-long"></i></a></div></div></div></div></div></div></div><div class="swiper-slide"><div class="hero-inner"><div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_1_3.jpg"></div><div class="hero-1-shape d-none d-lg-block" data-ani="slideinleft" data-ani-delay="0.4s"><img src="assets/img/shape/hero-1-shape.png" alt="hero-shape"></div><div class="container"><div class="row"><div class="col-xl-9 col-lg-8"><div class="hero-style1"><span class="sub-title style1" data-ani="slideinup" data-ani-delay="0.2s">Dynamic IT, Dynamic Results.</span><h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Your Trusted Partner in Tech & Strategy</h1><p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Welcome to Atek where we specialize in delivering tailored technology and IT solutions.</p><div class="btn-group" data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html" class="th-btn style7 th-icon">Discover More <i class="fa-light fa-arrow-right-long"></i> </a><a href="service.html" class="th-btn style2 th-icon">Our Services <i class="fa-light fa-arrow-right-long"></i></a></div></div></div></div></div></div></div></div><div class="th-swiper-custom"><button data-slider-prev="#heroSlide1" class="slider-arrow slider-prev"><img src="assets/img/icon/right-arrow.svg" alt=""></button><div class="slider-pagination"></div><button data-slider-next="#heroSlide1" class="slider-arrow slider-next"><img src="assets/img/icon/left-arrow.svg" alt=""></button></div></div></div>
     <section class=""><div class="feature-list-wrap"><div class="feature-area overflow-hidden" id="feature-area"><div class="row gx-0 justify-content-center"><div class="col-xl-4 col-lg-6"><div class="feature-item d-flex align-items-start"><div class="feature-item_icon"><img src="assets/img/icon/feature_1_1.svg" alt="icon"></div><div class="media-body"><h3 class="box-title text-anime-style-2">Highly Expert Team</h3><p class="feature-item_text wow fadeInUp">We provide the most responsive and functional IT design</p></div></div></div><div class="col-xl-4 col-lg-6"><div class="feature-item d-flex align-items-start"><div class="feature-item_icon"><img src="assets/img/icon/feature_1_2.svg" alt="icon"></div><div class="media-body"><h3 class="box-title text-anime-style-2">24/7 Customer Service</h3><p class="feature-item_text">We provide the most responsive and functional IT design</p></div></div></div><div class="col-xl-4 col-lg-6"><div class="feature-item d-flex align-items-start"><div class="feature-item_icon"><img src="assets/img/icon/feature_1_3.svg" alt="icon"></div><div class="media-body"><h3 class="box-title text-anime-style-2">Competitive Pricing</h3><p class="feature-item_text">We provide the most responsive and functional IT design</p></div></div></div></div></div></div></section>
     <section class="category-area bg-top-center space overflow-hidden" data-bg-src="assets/img/bg/category_bg_1.png"><div class="container th-container"><div class="title-area mb-60 text-center"><span class="sub-title text-anime-style-2">Our Features</span><h2 class="sec-title text-anime-style-3">Reliable IT for Unstoppable Growth</h2></div><div class="swiper th-slider categorySlider" id="categorySlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"spaceBetween":45,"slidesPerView":"5"}}}'><div class="swiper-wrapper"><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Enhanced Cybersecurity</a></h3><p class="sec-text">Advanced security measures like firewalls, encryption,</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Cloud Integration</a></h3><p class="sec-text">Access to scalable cloud-based services for storage</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Customized Services</a></h3><p class="sec-text">Tailored IT solutions designed to meet specific business needs.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">24/7 IT Support</a></h3><p class="sec-text">Around-the-clock monitoring and troubleshooting.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">End-to-End Solution</a></h3><p class="sec-text">Covers all aspects of IT, from consu-lting and planning</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Airbirds</a></h3><p class="sec-text">Advanced security measures like firewalls, encryption,</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Enhanced Cybersecurity</a></h3><p class="sec-text">Access to scalable cloud-based services for storage</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Hiking</a></h3><p class="sec-text">Tailored IT solutions designed to meet specific business needs.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Cloud Integration</a></h3><p class="sec-text">Around-the-clock monitoring and troubleshooting.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Cruises</a></h3><p class="sec-text">Covers all aspects of IT, from consu-lting and planning</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_1.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Customized Services</a></h3><p class="sec-text">Advanced security measures like firewalls, encryption,</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_2.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Walking</a></h3><p class="sec-text">Access to scalable cloud-based services for storage</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">24/7 IT Support</a></h3><p class="sec-text">Tailored IT solutions designed to meet specific business needs.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_4.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Walking</a></h3><p class="sec-text">Around-the-clock monitoring and troubleshooting.</p></div></div><div class="swiper-slide"><div class="category-card single"><div class="box-img global-img"><img src="assets/img/category/category_1_5.jpg" alt="Image"></div><h3 class="box-title"><a href="service.html">Customized Services</a></h3><p class="sec-text">Covers all aspects of IT, from consu-lting and planning</p></div></div></div></div></div>

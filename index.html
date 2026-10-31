@@ -445,6 +445,56 @@
           padding-bottom: 20px;
         }
       }
+
+      /* Form Validation Styles */
+      .contact-form2 .form-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .contact-form2 .form-control.is-invalid {
+        border-color: #dc3545 !important;
+      }
+      .contact-form2 .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 5px;
+        font-size: 13px;
+        color: #dc3545;
+        font-weight: 500;
+        text-align: left;
+      }
+      .contact-form2 .is-invalid ~ .invalid-feedback {
+        display: block;
+      }
+      @keyframes wgSpin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Copyright Section */
+      .wg-copyright-area {
+        background-color: #318ce7;
+        padding: 18px 0;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+      }
+      .wg-copyright-text {
+        color: #ffffff !important;
+        font-family: var(--body-font, "Inter", sans-serif);
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 0.2px;
+      }
+      @media (max-width: 767px) {
+        .wg-copyright-area {
+          padding: 15px 12px;
+        }
+        .wg-copyright-text {
+          font-size: 13px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -482,7 +532,7 @@
     <script src="assets/js/wg-preloader.js"></script>
     <div class="sidemenu-wrapper sidemenu-info">
       <div class="sidemenu-content">
-        <button class="closeButton sideMenuCls">
+        <button type="button" class="closeButton sideMenuCls">
           <i class="far fa-times"></i>
         </button>
         <div class="widget">
@@ -613,7 +663,9 @@
       </div>
     </div>
     <div class="popup-search-box">
-      <button class="searchClose"><i class="fal fa-times"></i></button>
+      <button type="button" class="searchClose">
+        <i class="fal fa-times"></i>
+      </button>
       <form action="#">
         <input type="text" placeholder="What are you looking for?" />
         <button type="submit"><i class="fal fa-search"></i></button>
@@ -621,7 +673,9 @@
     </div>
     <div class="th-menu-wrapper onepage-nav">
       <div class="th-menu-area text-center">
-        <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <button type="button" class="th-menu-toggle">
+          <i class="fal fa-times"></i>
+        </button>
         <div class="mobile-logo">
           <a href="index.html"
             ><img src="assets/img/logo.png" alt="Web Global"
@@ -697,7 +751,7 @@
           "#homesec": "#hero",
           "#aboutussec": "#about-sec",
           "#servicessec": "#categorySlider1",
-          "#contactussec": ".footer-wrapper",
+          "#contactussec": "#contactussec",
         };
         document
           .querySelectorAll(
@@ -910,6 +964,7 @@
         </div>
         <div class="th-swiper-custom">
           <button
+            type="button"
             data-slider-prev="#heroSlide1"
             class="slider-arrow slider-prev"
           >
@@ -917,6 +972,7 @@
           </button>
           <div class="slider-pagination"></div>
           <button
+            type="button"
             data-slider-next="#heroSlide1"
             class="slider-arrow slider-next"
           >
@@ -1730,33 +1786,29 @@
       </div>
     </div>
     <div
-      class="contact-area3 bg-top-center space-top overflow-hidden overflow-hidden"
-      data-bg-src="assets/img/bg/contact_bg_8.jpg"
+      class="contact-area3 bg-top-center space-top overflow-hidden"
+      id="contactussec"
+      data-bg-src="assets/img/bg/map.png"
     >
       <div class="container">
         <div class="row gy-4 justify-content-between">
           <div class="col-lg-6">
             <div class="title-area contact8-titlebox">
-              <span class="sub-title text-white text-anime-style-2"
-                >Need help?</span
-              >
-              <h2 class="sec-title text-white text-anime-style-3">
-                Easy solutions for all Data problems, keep business & ensure
-                high availability.
-              </h2>
-            </div>
-            <div class="contact-action wow fadeInUp">
-              <a href="contact.html" class="th-btn style7 th-radius th-icon"
-                >Contact With Us <i class="fa-light fa-arrow-right-long"></i
-              ></a>
+              <span class="sub-title text-anime-style-2">Address </span>
+              <h6 class="sec-title text-anime-style-3">
+                WebGlobal Private Limited<br />
+                Ma. Direy,1st Floor,<br />Dhilbahaaru Magu, K.Male',Maldives
+              </h6>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="contact8-form-area ms-xl-5">
               <form
-                action="https://html.themehour.net/atek/demo/mail.php"
+                action="mail.php"
                 method="POST"
-                class="contact-form2 ajax-contact"
+                class="contact-form2"
+                id="contactForm"
+                novalidate
               >
                 <div class="row">
                   <div class="form-group col-12">
@@ -1768,42 +1820,40 @@
                       placeholder="First Name"
                     />
                     <img src="assets/img/icon/user.svg" alt="" />
+                    <span class="invalid-feedback"></span>
                   </div>
                   <div class="form-group col-12">
                     <input
                       type="email"
                       class="form-control"
-                      name="email3"
-                      id="email3"
+                      name="email"
+                      id="email"
                       placeholder="Your Mail"
                     />
                     <img src="assets/img/icon/mail.svg" alt="" />
+                    <span class="invalid-feedback"></span>
                   </div>
                   <div class="form-group col-12">
-                    <select
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="number"
+                      id="number"
+                      placeholder="Phone Number"
+                    />
+                    <img src="assets/img/icon/call.svg" alt="" />
+                    <span class="invalid-feedback"></span>
+                  </div>
+                  <div class="form-group col-12">
+                    <input
+                      type="text"
                       name="subject"
                       id="subject"
-                      class="form-select nice-select"
-                    >
-                      <option
-                        value="Select Subject"
-                        selected="selected"
-                        disabled="disabled"
-                      >
-                        Select Subject
-                      </option>
-                      <option value="Django Development">
-                        Django Development
-                      </option>
-                      <option value="JavaScript Development">
-                        JavaScript Development
-                      </option>
-                      <option value="Uixi Design">Uixi Design</option>
-                      <option value="App Development">App Development</option>
-                      <option value="Software Management">
-                        Software Management
-                      </option>
-                    </select>
+                      class="form-control"
+                      placeholder="Your Subject"
+                    />
+                    <img src="assets/img/icon/chat.svg" alt="" />
+                    <span class="invalid-feedback"></span>
                   </div>
                   <div class="form-group col-12">
                     <textarea
@@ -1815,22 +1865,27 @@
                       placeholder="Your Message"
                     ></textarea>
                     <img src="assets/img/icon/chat.svg" alt="" />
+                    <span class="invalid-feedback"></span>
                   </div>
                 </div>
                 <p class="form-messages mb-0 mt-3"></p>
               </form>
               <div class="form-btn-wrapp">
                 <div class="form-btn">
-                  <button class="th-btn style5 th-radius">
+                  <button
+                    type="submit"
+                    form="contactForm"
+                    class="th-btn style5 th-radius"
+                  >
                     Send Message <img src="assets/img/icon/plane3.svg" alt="" />
                   </button>
                 </div>
                 <div class="contact-info">
                   <p class="contact-info_link">
-                    <a href="tel:+0123456789">+012 345 6789</a>
+                    <a href="tel:+9607782081">+960 778 2081</a>
                   </p>
                   <div class="contact-info_icon">
-                    <a href="tel:+0123456789"
+                    <a href="tel:+9607782081"
                       ><img src="assets/img/icon/call.svg" alt=""
                     /></a>
                   </div>
@@ -1841,6 +1896,22 @@
         </div>
       </div>
     </div>
+    <!-- Copyright Section -->
+    <div class="wg-copyright-area">
+      <div class="container text-center">
+        <p class="wg-copyright-text">
+          Copyright &copy; WebGlobal Private Limited <span id="currentYear">2026</span>. All Right Reserved.
+        </p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var yearEl = document.getElementById("currentYear");
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      })();
+    </script>
     <!-- Floating Contact Icons -->
     <div class="floating-contact-wrap" aria-label="Floating Contact Options">
       <a
@@ -1890,5 +1961,6 @@
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
   </body>
 </html>

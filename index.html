@@ -379,6 +379,59 @@
       .category-text:hover .th-btn i {
         color: #ffffff !important;
       }
+
+      /* Testimonial Active / Inactive Card Styling */
+      .testiSlider1 .testi-card,
+      .swiper-slide .testi-card {
+        background-color: #EAF4FD !important;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+      .testiSlider1 .testi-card .box-title,
+      .testiSlider1 .testi-card .testi-card_desig,
+      .testiSlider1 .testi-card .testi-card_text,
+      .swiper-slide .testi-card .box-title,
+      .swiper-slide .testi-card .testi-card_desig,
+      .swiper-slide .testi-card .testi-card_text {
+        transition: color 0.4s ease;
+      }
+      .testiSlider1 .swiper-slide-active .testi-card,
+      .swiper-slide-active .testi-card {
+        background-color: #318ce7 !important;
+        color: #ffffff !important;
+      }
+      .testiSlider1 .swiper-slide-active .testi-card .box-title,
+      .testiSlider1 .swiper-slide-active .testi-card .box-title a,
+      .testiSlider1 .swiper-slide-active .testi-card .testi-card_desig,
+      .testiSlider1 .swiper-slide-active .testi-card .testi-card_text,
+      .swiper-slide-active .testi-card .box-title,
+      .swiper-slide-active .testi-card .box-title a,
+      .swiper-slide-active .testi-card .testi-card_desig,
+      .swiper-slide-active .testi-card .testi-card_text {
+        color: #ffffff !important;
+      }
+
+      /* Brand Slider Spacing & Logo Display */
+      .brandSlider1 {
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+      .brand-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      @media (max-width: 991px) {
+        .brandSlider1 {
+          padding-top: 25px;
+          padding-bottom: 25px;
+        }
+      }
+      @media (max-width: 767px) {
+        .brandSlider1 {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1440,6 +1493,10 @@
     </section>
     <div class="brand-area overflow-hidden space-bottom">
       <div class="container th-container">
+        <div class="title-area mb-20 text-center">
+          <span class="sub-title text-anime-style-2">Our Partners</span>
+          <h2 class="sec-title text-anime-style-3">Trusted by Leading Brands</h2>
+        </div>
         <div
           class="swiper th-slider brandSlider1"
           id="brandSlider1"
@@ -1451,12 +1508,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/Iolite-logo.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_1.svg"
+                    src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1465,12 +1524,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_2.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/logo-ag.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_2.svg"
+                    src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1479,12 +1540,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_3.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/mi.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_3.svg"
+                    src="assets/img/brand/mi.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1493,12 +1556,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_4.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/MO-logo.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_4.svg"
+                    src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1507,12 +1572,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_5.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/sausan-logo-01.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_5.svg"
+                    src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1521,12 +1588,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_6.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/spin.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_6.svg"
+                    src="assets/img/brand/spin.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1535,12 +1604,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_7.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/Iolite-logo.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_7.svg"
+                    src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1549,12 +1620,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/logo-ag.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_1.svg"
+                    src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1563,12 +1636,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_4.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/mi.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_4.svg"
+                    src="assets/img/brand/mi.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1577,12 +1652,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_3.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/MO-logo.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_3.svg"
+                    src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1591,12 +1668,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_2.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/sausan-logo-01.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_2.svg"
+                    src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1605,40 +1684,14 @@
                 <a href="#"
                   ><img
                     class="original"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo" />
+                    src="assets/img/brand/spin.png"
+                    alt="Brand Logo"
+                    style="object-fit: contain;" />
                   <img
                     class="gray"
-                    src="assets/img/brand/brand_1_1.svg"
+                    src="assets/img/brand/spin.png"
                     alt="Brand Logo"
-                /></a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="brand-box">
-                <a href="#"
-                  ><img
-                    class="original"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo" />
-                  <img
-                    class="gray"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo"
-                /></a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="brand-box">
-                <a href="#"
-                  ><img
-                    class="original"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo" />
-                  <img
-                    class="gray"
-                    src="assets/img/brand/brand_1_1.svg"
-                    alt="Brand Logo"
+                    style="object-fit: contain;"
                 /></a>
               </div>
             </div>
@@ -1859,6 +1912,35 @@
         </div>
       </div>
     </footer>
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact-wrap" aria-label="Floating Contact Options">
+      <a
+        href="https://wa.me/9607782081"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="floating-contact-btn btn-whatsapp"
+        aria-label="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span class="contact-tooltip">WhatsApp</span>
+      </a>
+      <a
+        href="mailto:sales.mv@webgbl.com"
+        class="floating-contact-btn btn-email"
+        aria-label="Email"
+      >
+        <i class="fas fa-envelope"></i>
+        <span class="contact-tooltip">Email</span>
+      </a>
+      <a
+        href="tel:+960778208"
+        class="floating-contact-btn btn-call"
+        aria-label="Call"
+      >
+        <i class="fas fa-phone"></i>
+        <span class="contact-tooltip">Call</span>
+      </a>
+    </div>
     <div class="scroll-top">
       <svg
         class="progress-circle svg-content"

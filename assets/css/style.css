@@ -145,3 +145,223 @@
     display: none;
   }
 }
+
+/* ==========================================================================
+   WEB GLOBAL Premium Preloader
+   ========================================================================== */
+html.wg-preloader-active,
+body.wg-preloader-active {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+.wg-preloader-wrap {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #000000;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.wg-preloader-wrap.wg-preloader-fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none !important;
+}
+
+.wg-preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo Box & Reveal Animation */
+.wg-preloader-logo-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: wgLogoEntrance 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.wg-preloader-logo {
+  display: block;
+  width: 280px;
+  max-width: 80vw;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px rgba(49, 140, 231, 0.35));
+  animation: wgLogoPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes wgLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.86) translateY(8px);
+    filter: drop-shadow(0 0 0 rgba(49, 140, 231, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 16px rgba(49, 140, 231, 0.35));
+  }
+}
+
+@keyframes wgLogoPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 16px rgba(49, 140, 231, 0.35));
+  }
+  50% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 24px rgba(49, 140, 231, 0.65));
+  }
+}
+
+/* Ambient Glow behind Logo Box */
+.wg-preloader-ambient-glow {
+  position: absolute;
+  width: 340px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(49, 140, 231, 0.25) 0%, rgba(11, 20, 34, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+  animation: wgGlowPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes wgGlowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Progress Track & Animated Line */
+.wg-preloader-progress-track {
+  width: 220px;
+  max-width: 65vw;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 26px;
+  position: relative;
+}
+
+.wg-preloader-progress-bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #318ce7, #79f4e4, #318ce7);
+  box-shadow: 0 0 10px rgba(121, 244, 228, 0.7);
+  animation: wgProgressSweep 1.6s ease-in-out infinite;
+}
+
+@keyframes wgProgressSweep {
+  0% {
+    left: -40%;
+    width: 40%;
+  }
+  50% {
+    left: 20%;
+    width: 65%;
+  }
+  100% {
+    left: 100%;
+    width: 40%;
+  }
+}
+
+/* Loading Experience Text & Animated Dots */
+.wg-preloader-text {
+  font-family: var(--body-font, "Inter", sans-serif);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.wg-preloader-dots {
+  display: inline-flex;
+  margin-left: 2px;
+}
+
+.wg-preloader-dots span {
+  display: inline-block;
+  opacity: 0;
+  animation: wgDotPulse 1.4s infinite both;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.wg-preloader-dots span:nth-child(1) { animation-delay: 0.2s; }
+.wg-preloader-dots span:nth-child(2) { animation-delay: 0.4s; }
+.wg-preloader-dots span:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes wgDotPulse {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+/* Hide legacy template preloader to avoid any visual collision */
+.preloader {
+  display: none !important;
+}
+
+/* Responsive Scaling */
+@media (max-width: 767px) {
+  .wg-preloader-logo {
+    width: 220px;
+  }
+  .wg-preloader-ambient-glow {
+    width: 260px;
+    height: 140px;
+  }
+  .wg-preloader-progress-track {
+    width: 170px;
+    margin-top: 20px;
+  }
+  .wg-preloader-text {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 14px;
+  }
+}

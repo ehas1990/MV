@@ -394,8 +394,10 @@
       /* Testimonial Active / Inactive Card Styling */
       .testiSlider1 .testi-card,
       .swiper-slide .testi-card {
-        background-color: #EAF4FD !important;
-        transition: background-color 0.4s ease, color 0.4s ease;
+        background-color: #eaf4fd !important;
+        transition:
+          background-color 0.4s ease,
+          color 0.4s ease;
       }
       .testiSlider1 .testi-card .box-title,
       .testiSlider1 .testi-card .testi-card_desig,
@@ -456,13 +458,28 @@
         ><img src="assets/img/icon/drag-arrow-right.svg" alt=""
       /></span>
     </div>
-    <div class="preloader">
-      <button class="th-btn preloaderCls">Cancel Preloader</button>
-      <div class="preloader-inner">
-        <img src="assets/img/logo-icon3.svg" alt="img" />
-        <span class="loader">Atek <span class="loading-text">Atek</span></span>
+    <!-- WEB GLOBAL Preloader -->
+    <div class="wg-preloader-wrap" id="wgPreloader">
+      <div class="wg-preloader-content">
+        <div class="wg-preloader-logo-box">
+          <div class="wg-preloader-ambient-glow"></div>
+          <img
+            src="assets/img/logo.png"
+            alt="WEB GLOBAL"
+            class="wg-preloader-logo"
+          />
+        </div>
+        <div class="wg-preloader-progress-track">
+          <div class="wg-preloader-progress-bar"></div>
+        </div>
+        <div class="wg-preloader-text">
+          Loading Experience<span class="wg-preloader-dots"
+            ><span>.</span><span>.</span><span>.</span></span
+          >
+        </div>
       </div>
     </div>
+    <script src="assets/js/wg-preloader.js"></script>
     <div class="sidemenu-wrapper sidemenu-info">
       <div class="sidemenu-content">
         <button class="closeButton sideMenuCls">
@@ -1506,7 +1523,9 @@
       <div class="container th-container">
         <div class="title-area mb-20 text-center">
           <span class="sub-title text-anime-style-2">Our Partners</span>
-          <h2 class="sec-title text-anime-style-3">Trusted by Leading Brands</h2>
+          <h2 class="sec-title text-anime-style-3">
+            Trusted by Leading Brands
+          </h2>
         </div>
         <div
           class="swiper th-slider brandSlider1"
@@ -1521,12 +1540,12 @@
                     class="original"
                     src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1537,12 +1556,12 @@
                     class="original"
                     src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1553,12 +1572,12 @@
                     class="original"
                     src="assets/img/brand/mi.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/mi.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1569,12 +1588,12 @@
                     class="original"
                     src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1585,12 +1604,12 @@
                     class="original"
                     src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1601,12 +1620,12 @@
                     class="original"
                     src="assets/img/brand/spin.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/spin.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1617,12 +1636,12 @@
                     class="original"
                     src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/Iolite-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1633,12 +1652,12 @@
                     class="original"
                     src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/logo-ag.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1649,12 +1668,12 @@
                     class="original"
                     src="assets/img/brand/mi.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/mi.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1665,12 +1684,12 @@
                     class="original"
                     src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/MO-logo.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1681,12 +1700,12 @@
                     class="original"
                     src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/sausan-logo-01.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
@@ -1697,12 +1716,12 @@
                     class="original"
                     src="assets/img/brand/spin.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;" />
+                    style="object-fit: contain" />
                   <img
                     class="gray"
                     src="assets/img/brand/spin.png"
                     alt="Brand Logo"
-                    style="object-fit: contain;"
+                    style="object-fit: contain"
                 /></a>
               </div>
             </div>
